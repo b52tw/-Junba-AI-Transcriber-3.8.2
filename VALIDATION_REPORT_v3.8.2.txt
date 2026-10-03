@@ -1,0 +1,19 @@
+Junba AI Transcriber v3.8.2｜重新封包驗證報告
+
+本包目的：修正本次 GitHub Actions 失敗，Windows 僅保留 Single EXE，Android 修正 Native library 重複衝突。
+
+[PASS] ZIP / Repository 根目錄包含 main.py
+[PASS] ZIP / Repository 根目錄包含 requirements.txt
+[PASS] Windows workflow 不再要求或建立 Portable
+[PASS] Windows workflow 只建立 Junba-v382-Single / Junba.exe
+[PASS] setup-python 已取消 pip cache，避免 requirements.txt 缺漏時在自訂 preflight 前先失敗
+[PASS] Windows Source preflight 明確檢查 main.py、requirements.txt、app、tests、hooks、packaging、onefile spec
+[PASS] Python compileall：main.py + app 通過
+[PASS] v3.8.2 封包專用測試：3 passed
+[PASS] Android 保留 whisper-android:1.0.0
+[PASS] Android 保留 ffmpeg-kit-audio:8.1.7
+[PASS] Android packaging 已加入 **/libc++_shared.so pickFirst
+[PASS] Android Hybrid / SecureKeyStore / AI Studio API Key 控制仍存在
+[PASS] ZIP 內無額外最外層專案資料夾；解壓後第一層直接是 main.py 等根目錄檔案
+
+注意：本環境無法在 Linux 容器直接產生 Windows PyInstaller EXE，因此最終 Junba.exe 仍由 GitHub Actions Windows runner 建置並執行 EXE self-test。

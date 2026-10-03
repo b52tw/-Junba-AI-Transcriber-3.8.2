@@ -1,0 +1,25 @@
+Junba AI Transcriber v3.8.2｜GitHub 建置步驟
+
+1. 解壓 ZIP。
+2. 將解壓後第一層的「全部內容」放到 GitHub Repository 根目錄。
+3. Repository 根目錄必須直接看到：
+   main.py
+   requirements.txt
+   JunbaAITranscriber_onefile.spec
+   app/
+   android/
+   hooks/
+   packaging/
+   tests/
+   .github/
+4. Workflow 路徑必須是：
+   .github/workflows/build-windows-v3.8.yml
+5. GitHub → Actions → Build Junba AI Transcriber v3.8.2 Single + Android → Run workflow。
+6. Windows 完成後下載：
+   Junba-v382-Single
+   內容：Junba.exe + SHA256.txt
+7. Android 完成後下載：
+   Junba-v382-APK
+   內容：Junba.apk + SHA256.txt
+
+本版不再建立 Portable，不會出現 Junba-v382-Portable。
